@@ -8,7 +8,7 @@ const bodyParser    = require("body-parser");
 const app           = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static("../public"));
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 const db = require("./lib/in-memory-db");
@@ -18,7 +18,7 @@ const db = require("./lib/in-memory-db");
 // actual database it uses and see little to no changes elsewhere in the code
 // (hint hint).
 //
-// Because it exports a function that expects the `db` as a parameter, we can
+// Because it **exports a function that expects the `db` as a parameter**, we can
 // require it and pass the `db` parameter immediately:
 const DataHelpers = require("./lib/data-helpers.js")(db);
 

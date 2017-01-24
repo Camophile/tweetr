@@ -1,0 +1,25 @@
+.new-tweet {
+  margin: 2em;
+  border-radius: 4px;
+  background-color: #ccc;
+  text-align: left;
+  padding: 0.2em 1em 1em 1em;
+}
+
+.new-tweet h2 {
+  border-bottom: 1px solid black;
+  padding: 0;
+}
+
+.counter {
+  float: right;
+}
+
+input {
+  border-radius: 4px;
+  background-color: white;
+}
+
+textarea {
+  width: 100%;
+}
