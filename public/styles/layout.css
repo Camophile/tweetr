@@ -88,7 +88,7 @@ article footer {
   line-height: 28px;
 }
 
-article footer i {
+article footer .icons {
   padding: 4px;
   float: right;
   }
