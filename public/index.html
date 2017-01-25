@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="/styles/nav.css" type="text/css">
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
+    <script src="https://use.fontawesome.com/bbaa50869a.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -32,12 +32,28 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2>Compost Wheat</h2>
         <form action="/tweets/" method="POST">
           <textarea name="text" placeholder="Ain't no sunshine"></textarea>
-          <input type="submit" value="Tweep">
+          <input type="submit" value="Weep">
           <span class="counter">140</span>
         </form>
+      </section>
+      <section id="tweets">
+        <article>
+          <header>
+            <img src='https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png'>
+            <span>Press-contempt Trump</span>
+            <span class="handle">@POTUS</span>
+          </header>
+            <div class="content">Ich bin ein presidenter</div>
+          <footer>
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            2 days ago
+          </footer>
+        </article>
       </section>
     </main>
 

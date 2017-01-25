@@ -35,6 +35,64 @@ body {
   height: 100%;
  }
 
+article {
+  border: 1px solid black;
+  height: 200px;
+  border-radius: 4px;
+  padding: 0 0 1em 0;
+  margin-left: 40px;
+  padding-bottom: 20px;
+  margin-right: 40px;
+ }
+
+article header img{
+  padding: 8px 0 0 8px;
+  float: left;
+}
+
+article div {
+  font-size: x-large;
+  line-height: 100px;
+  padding-left: 10px;
+}
+
+article div:hover {
+  font-size: x-large;
+  font-color: gray;
+  line-height: 100px;
+  padding-left: 10px;
+}
+
+article span{
+  padding-left: 7px;
+  line-height: 32px;
+}
+
+article header {
+  background-color: rgba(0, 160, 135, 1);
+  height: 70px;
+ }
+
+article header:hover {
+  background-color: rgba(0, 160, 135, 0.72);
+ }
+
+article .handle {
+  float: right;
+  padding: 20px 10px 0 0;
+}
+
+article footer {
+  border-top: 1px solid black;
+  padding-left: 10px;
+  line-height: 28px;
+}
+
+article footer i {
+  padding: 4px;
+  float: right;
+  }
+
  .counter {
   color: black;
  }
