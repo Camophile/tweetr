@@ -37,12 +37,12 @@ body {
 
 article {
   border: 1px solid black;
-  height: 200px;
+/*  height: 200px;*/
   border-radius: 4px;
   padding: 0 0 1em 0;
   margin-left: 40px;
-  padding-bottom: 20px;
   margin-right: 40px;
+  margin-bottom: 10px;
  }
 
 article header img{
@@ -52,21 +52,13 @@ article header img{
 
 article div {
   font-size: x-large;
-  line-height: 100px;
-  padding-left: 10px;
-}
-
-article div:hover {
-  font-size: x-large;
-  font-color: gray;
-  line-height: 100px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   padding-left: 10px;
 }
 
 article span{
-  padding-left: 7px;
-  line-height: 32px;
-}
+  padding-left: 7px;}
 
 article header {
   background-color: rgba(0, 160, 135, 1);
@@ -85,10 +77,9 @@ article .handle {
 article footer {
   border-top: 1px solid black;
   padding-left: 10px;
-  line-height: 28px;
 }
 
-article footer .icons {
+article footer i {
   padding: 4px;
   float: right;
   }
