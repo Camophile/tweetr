@@ -25,9 +25,28 @@ $(function(){
     return $content;
   }
 
+  function printDate(ms) {
+    const milisecs = Date.now() - ms;
+    if(milisecs >= 86400000){
+      days = milisecs / 86400000;
+      return (Math.floor(days) + " days ago");
+    }
+    if(milisecs >= 3600000) {
+      hours = milisecs / 3600000;
+      return (Math.floor(hours) + " hours ago");
+    }
+    if(milisecs >= 60000){
+      mins = milisecs / 60000;
+      return (Math.floor(mins) + " minutes ago");
+    } else {
+      secs = milisecs / 1000;
+      return (Math.floor(seconds) + " seconds ago");
+    }
+  }
+
   function printFooter(tweet) {
     const $footer = $("<footer>");
-    const $date = $("<span>");//.text(makeDate()).addClass("date");
+    const $date = $("<span>").text(printDate(tweet.created_at)).addClass("date");
     const $flag = $("<i>").addClass("fa fa-flag").attr("aria-hidden", true);
     const $retweet = $("<i>").addClass("fa fa-retweet").attr("aria-hidden", true);
     const $heart = $("<i>").addClass("fa fa-heart").attr("aria-hidden", true);
@@ -79,10 +98,19 @@ $(function(){
       success: function() {
         $("#tweets").empty();
         loadTweets();
+        $("textarea").val("");
       }
     });
   }
 });
+
+  $("#tweets").on('mouseenter', 'article', function() {
+    $(this).find("header").css('opacity', '0.72')
+    })
+    .mouseleave('article', function(){
+      $(this).find("header").css('opacity', '1')
+    // $article.find("header").css('background-color', 'rgba(0, 160, 135, 0.72)');
+  })
 
   $("nav button").click(function(event) {
     const $tweet = $(".new-tweet");

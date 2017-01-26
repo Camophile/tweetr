@@ -50,6 +50,12 @@ article header img{
   float: left;
 }
 
+/*article header img:hover {
+  padding: 8px 0 0 8px;
+  float: left;
+  opacity: 0.0;
+}*/
+
 article div {
   font-size: x-large;
   padding-top: 15px;
@@ -65,9 +71,22 @@ article header {
   height: 70px;
  }
 
-article header:hover {
-  background-color: rgba(0, 160, 135, 0.72);
+ article header span {
+  font-size: x-large;
+  position: relative;
+  top: 5px;
+  font-weight: bold;
  }
+
+ article header .handle {
+  font-size: medium;
+  font-weight: normal;
+  top: 5px;
+ }
+
+/*article header:hover {
+  background-color: rgba(0, 160, 135, 0.72);
+ }*/
 
 article .handle {
   float: right;
@@ -76,13 +95,19 @@ article .handle {
 
 article footer {
   border-top: 1px solid black;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 article footer i {
   padding: 10px 6px 0 0;
   float: right;
   }
+
+article footer .date {
+  position: relative;
+  top: 8px;
+  right: 4px;
+}
 
  .counter {
   color: black;
