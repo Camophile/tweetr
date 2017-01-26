@@ -63,12 +63,12 @@ $(function(){
   $('[action="/tweets/"]').on('submit', function(event) {
     event.preventDefault();
     let charLim = 140;
-    let span = $('textarea');
-    if(span.val().length > charLim){
+    let $span = $('textarea').val();
+    if($span.length > charLim){
       alert("Th'art beyond the delimitations herein");
       return;
     }
-    if(span.val() === ""){
+    if($span === ""){
       alert("duuuuuude");
       return;
     } else{
@@ -80,9 +80,19 @@ $(function(){
         $("#tweets").empty();
         loadTweets();
       }
-    })
+    });
   }
 });
+
+  $("nav button").click(function(event) {
+    const $tweet = $(".new-tweet");
+    $tweet.slideToggle('slow', function(){
+      if($tweet.is(":visible")){
+        $("textarea").focus();
+      }
+    });
+
+  });
 
   function renderTweets(obj) {
     obj.forEach(tweet => {

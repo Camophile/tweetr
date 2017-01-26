@@ -20,3 +20,27 @@
   font-size: 40px;
   line-height: 2;
 }
+
+#nav-bar button:hover {
+  float: right;
+  background-color: #ebfdff;
+  text-align: center;
+  font-size: 130%;
+  border-style: none;
+  line-height: 3em;
+  width: 7em;
+  margin-top: 7px;
+  border-radius: 10px
+}
+
+#nav-bar button {
+  float: right;
+  background-color: #d8fbff;
+  text-align: center;
+  font-size: 130%;
+  border-style: none;
+  line-height: 3em;
+  width: 7em;
+  margin-top: 7px;
+  border-radius: 10px
+}
