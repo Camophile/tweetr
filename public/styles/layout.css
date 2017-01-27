@@ -37,7 +37,6 @@ body {
 
 article {
   border: 1px solid black;
-/*  height: 200px;*/
   border-radius: 4px;
   padding: 0 0 1em 0;
   margin-left: 40px;
@@ -50,12 +49,6 @@ article header img{
   float: left;
 }
 
-/*article header img:hover {
-  padding: 8px 0 0 8px;
-  float: left;
-  opacity: 0.0;
-}*/
-
 article div {
   font-size: x-large;
   padding-top: 15px;
@@ -67,7 +60,7 @@ article span{
   padding-left: 7px;}
 
 article header {
-  background-color: rgba(0, 160, 135, 1);
+  background-color: rgba(0, 160, 135, 0.72);
   height: 70px;
  }
 
@@ -84,10 +77,6 @@ article header {
   top: 5px;
  }
 
-/*article header:hover {
-  background-color: rgba(0, 160, 135, 0.72);
- }*/
-
 article .handle {
   float: right;
   padding: 20px 10px 0 0;
@@ -101,14 +90,16 @@ article footer {
 article footer i {
   padding: 10px 6px 0 0;
   float: right;
+  opacity: 0;
   }
 
 article footer .date {
   position: relative;
   top: 8px;
   right: 4px;
+  opacity: 0;
 }
 
- .counter {
+.counter {
   color: black;
  }

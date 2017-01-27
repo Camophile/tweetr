@@ -9,17 +9,17 @@ module.exports = function makeDataHelpers(db) { //db from `in-memory-db.js`
 
     // Saves a tweet to `db`
     saveTweet: function(newTweet, callback) {
-      simulateDelay(() => {
-        db.tweets.push(newTweet);
+        db.collection("tweets").insert(newTweet);
         callback(null, true);
-      });
     },
 
     // Get all tweets in `db`, sorted by newest first
     getTweets: function(callback) {
-      simulateDelay(() => {
-        const sortNewestFirst = (a, b) => a.created_at - b.created_at; //indexes the created date of imported object
-        callback(null, db.tweets.sort(sortNewestFirst));
+      db.collection("tweets").find().toArray((err, array) => {
+        if (err) {
+          return callback(err);
+       }
+        callback(null, array);
       });
     }
 

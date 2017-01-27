@@ -105,15 +105,22 @@ $(function(){
 });
 
   $("#tweets").on('mouseenter', 'article', function() {
-    $(this).find("header").css('opacity', '0.72')
-    })
-    .mouseleave('article', function(){
-      $(this).find("header").css('opacity', '1')
-    // $article.find("header").css('background-color', 'rgba(0, 160, 135, 0.72)');
+    const $this = $(this);
+    $this.find("header").css('opacity', '1');
+    $this.find("i").css('opacity', '1');
+    $this.find(".date").css('opacity', '1');
+  }).on('mouseleave', 'article', function(){
+    const $this = $(this);
+    $this.find("header").css('opacity', '0.72');
+    $this.find("i").css('opacity', '0');
+    $this.find(".date").css('opacity', '0');
   })
 
   $("nav button").click(function(event) {
     const $tweet = $(".new-tweet");
+    if($tweet.is(":animated")){
+      return false;
+    }
     $tweet.slideToggle('slow', function(){
       if($tweet.is(":visible")){
         $("textarea").focus();

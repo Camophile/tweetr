@@ -8,6 +8,11 @@
   padding: 0px 2em 0px 2em;
   }
 
+i {
+  margin-top: 12px;
+  color: black;
+}
+
 #nav-bar .logo {
   height: 80px;
   width: 80px;
